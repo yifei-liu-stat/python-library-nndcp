@@ -1,0 +1,823 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Welcome to NNDCP 0.0.1! &mdash; nndcp  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> nndcp
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to NNDCP 0.0.1!</a></li>
+<li><a class="reference internal" href="#api">API</a><ul>
+<li><a class="reference internal" href="#module-DCshallow">Module <code class="docutils literal notranslate"><span class="pre">DCshallow</span></code></a></li>
+<li><a class="reference internal" href="#module-SGDtraining">Module <code class="docutils literal notranslate"><span class="pre">SGDtraining</span></code></a></li>
+<li><a class="reference internal" href="#module-0">Module <code class="docutils literal notranslate"><span class="pre">data</span></code></a></li>
+<li><a class="reference internal" href="#module-utils.util">Module <code class="docutils literal notranslate"><span class="pre">utils.util</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">nndcp</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Welcome to NNDCP 0.0.1!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-nndcp-0-0-1">
+<h1>Welcome to NNDCP 0.0.1!<a class="headerlink" href="#welcome-to-nndcp-0-0-1" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p><strong>Training neural network with difference of convex programming (DCP)</strong></p>
+<p>This is the API documentation for Python package <code class="docutils literal notranslate"><span class="pre">nndcp</span></code>, designed for training neural network with DC algorithm.
+This pakcage have four different modules, aiming for different tasks.
+For more details, please refer to the GitHub page for this project (<a class="reference external" href="https://github.umn.edu/liu00980/nndcp">here</a>).
+You will also find some examples for using this package there.</p>
+</div>
+<div class="section" id="api">
+<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-DCshallow">
+<span id="module-dcshallow"></span><h2>Module <code class="docutils literal notranslate"><span class="pre">DCshallow</span></code><a class="headerlink" href="#module-DCshallow" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="DCshallow.trainnn_dcshallow">
+<code class="sig-prename descclassname"><span class="pre">DCshallow.</span></code><code class="sig-name descname"><span class="pre">trainnn_dcshallow</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lmda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MOSEK'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DCshallow.trainnn_dcshallow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train a shallow neural network with DC algorithm, with mean absolute error (MAE) as the loss function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train_ds</strong> (<em>list</em>) – training dataset in form of [(input_1, label_1), …, (input_n, label_n)]</p></li>
+<li><p><strong>val_ds</strong> (<em>list</em>) – validation dataset in the same form as <code class="docutils literal notranslate"><span class="pre">train_ds</span></code></p></li>
+<li><p><strong>width</strong> (<em>int</em>) – number of nerons in the unique hidden layer</p></li>
+<li><p><strong>train_model</strong> (<em>torch.nn.modules.container.Sequential</em>) – a neural network model, providing initialization of DC algorithm</p></li>
+<li><p><strong>lmda</strong> (<em>float</em><em>, </em><em>optional</em>) – exact penalty parameter. Defaults to 10.0.</p></li>
+<li><p><strong>iterations</strong> (<em>int</em><em>, </em><em>optional</em>) – number of DC iterations to be performed. Defaults to 20.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to print training and validation DC losses. Defaults to True.</p></li>
+<li><p><strong>solver</strong> (<em>str</em><em>, </em><em>optional</em>) – solver used for solving SOCP. Can be one of ‘ECOS’, ‘MOSEK’ and ‘SCS’. Defaults to ‘MOSEK’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>a tuple consisting of the following elements in sequence:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>U0 (<em>np.ndarray</em>)</dt><dd><p>Weight matrix of the first hidden layer of shape (d_0, d_1).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>alpha0 (<em>np.ndarray</em>)</dt><dd><p>Weight matrix of the output layer of shape (d_1, ).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>wine_train_dcloss (<em>list</em>)</dt><dd><p>Training loss (MAE) per DC iteration.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>wine_val_dcloss (<em>list</em>)</dt><dd><p>Validation loss (MAE) per DC iteration.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>exactpenalty (<em>float</em>)</dt><dd><p>Exact penalty of introducing artifitial variable (linear output of the hidden layer).</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-SGDtraining">
+<span id="module-sgdtraining"></span><h2>Module <code class="docutils literal notranslate"><span class="pre">SGDtraining</span></code><a class="headerlink" href="#module-SGDtraining" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="SGDtraining.trainnn_sgd">
+<code class="sig-prename descclassname"><span class="pre">SGDtraining.</span></code><code class="sig-name descname"><span class="pre">trainnn_sgd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">MSELoss()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nepochs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SGDtraining.trainnn_sgd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train a neural network model with SGD.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train_ds</strong> (<em>list</em>) – training dataset in form of [(input_1, label_1), …, (input_n, label_n)]</p></li>
+<li><p><strong>val_ds</strong> (<em>list</em>) – validation dataset in the same form as <code class="docutils literal notranslate"><span class="pre">train_ds</span></code></p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – batch size for SGD training</p></li>
+<li><p><strong>train_model</strong> (<em>torch.nn.modules.container.Sequential</em>) – a neural network model used for training</p></li>
+<li><p><strong>loss_fn</strong> (<em>torch.nn.modules.loss</em><em>, </em><em>optional</em>) – loss function used in SGD training. Defaults to torch.nn.MSELoss().</p></li>
+<li><p><strong>nepochs</strong> (<em>int</em><em>, </em><em>optional</em>) – number of epochs to be trained. Defaults to 100.</p></li>
+<li><p><strong>lr</strong> (<em>float</em><em>, </em><em>optional</em>) – learning rate. Defaults to 0.01.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to print the training loss and validation loss during the training process. Defaults to True.</p></li>
+<li><p><strong>show</strong> (<em>int</em><em>, </em><em>optional</em>) – frequency to print the losses. Defaluts to 10 (every 10 epochs).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>a tuple consisting of the following elements in sequence:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>train_loss (<em>list</em>)</dt><dd><p>Training loss per SGD epoch.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>val_loss (<em>list</em>)</dt><dd><p>Validation loss per SGD epoch.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>train_model (<em>torch.nn.modules.container.Sequential</em>)</dt><dd><p>Trained model. Note that the function call will change the input <code class="docutils literal notranslate"><span class="pre">train_model</span></code>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-0">
+<span id="module-data"></span><h2>Module <code class="docutils literal notranslate"><span class="pre">data</span></code><a class="headerlink" href="#module-0" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="data.load_calhousing">
+<code class="sig-prename descclassname"><span class="pre">data.</span></code><code class="sig-name descname"><span class="pre">load_calhousing</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data.load_calhousing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns processed California Housing Data Set.</p>
+<p>See <a class="reference external" href="https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html">https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html</a> for detailed descritpion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>A dictionary with the following keys:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>calhousing_df (<em>pandas.core.frame.DataFrame</em>)</dt><dd><p>A preprocessed pandas dataframe;
+Compared to the original ones, we impute missing values with medians.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>X (<em>_np.ndarray</em>)</dt><dd><p>Design matrix with all numerical predictors standardized, and all categorical predictors one-hot encoded.
+Also, the first column is all-one vector.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Y (<em>_np.ndarray</em>)</dt><dd><p>Standardized response.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">data</span> <span class="kn">import</span> <span class="n">load_calhousing</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">calhousing_df</span> <span class="o">=</span> <span class="n">load_calhousing</span><span class="p">()[</span><span class="s2">&quot;calhousing_df&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">load_calhousing</span><span class="p">()[</span><span class="s2">&quot;X&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Y</span> <span class="o">=</span> <span class="n">load_calhousing</span><span class="p">()[</span><span class="s2">&quot;Y&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.load_crime">
+<code class="sig-prename descclassname"><span class="pre">data.</span></code><code class="sig-name descname"><span class="pre">load_crime</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data.load_crime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns processed Communities and Crime Data Set.</p>
+<p>See <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Communities+and+Crime">https://archive.ics.uci.edu/ml/datasets/Communities+and+Crime</a> for detailed descritpion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>A dictionary with the following keys:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>crime_df (<em>pandas.core.frame.DataFrame</em>)</dt><dd><p>A preprocessed pandas dataframe;
+Compared to the original ones, we delete some non-predictive variables and impute missing values with medians.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>X (<em>_np.ndarray</em>)</dt><dd><p>Design matrix with all numerical predictors standardized, and all categorical predictors one-hot encoded.
+Also, the first column is all-one vector.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Y (<em>_np.ndarray</em>)</dt><dd><p>Standardized response.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">data</span> <span class="kn">import</span> <span class="n">load_crime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">crime_df</span> <span class="o">=</span> <span class="n">load_crime</span><span class="p">()[</span><span class="s2">&quot;crime_df&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">load_crime</span><span class="p">()[</span><span class="s2">&quot;X&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Y</span> <span class="o">=</span> <span class="n">load_crime</span><span class="p">()[</span><span class="s2">&quot;Y&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="data.load_wine">
+<code class="sig-prename descclassname"><span class="pre">data.</span></code><code class="sig-name descname"><span class="pre">load_wine</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data.load_wine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns processed Wine Quality Data Set.</p>
+<p>See <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Wine+Quality">https://archive.ics.uci.edu/ml/datasets/Wine+Quality</a> for detailed descritpion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>A dictionary with the following keys:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>wine_df (<em>pandas.core.frame.DataFrame</em>)</dt><dd><p>A preprocessed pandas dataframe;
+Compared to the original ones, we merge the two datasets (white wine and red wine) and impute missing values with medians.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>X (<em>_np.ndarray</em>)</dt><dd><p>Design matrix with all numerical predictors standardized, and all categorical predictors one-hot encoded.
+Also, the first column is all-one vector.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Y (<em>_np.ndarray</em>)</dt><dd><p>Standardized response.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">data</span> <span class="kn">import</span> <span class="n">load_wine</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wine_df</span> <span class="o">=</span> <span class="n">load_wine</span><span class="p">()[</span><span class="s2">&quot;wine_df&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">load_wine</span><span class="p">()[</span><span class="s2">&quot;X&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Y</span> <span class="o">=</span> <span class="n">load_wine</span><span class="p">()[</span><span class="s2">&quot;Y&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-utils.util">
+<span id="module-utils-util"></span><h2>Module <code class="docutils literal notranslate"><span class="pre">utils.util</span></code><a class="headerlink" href="#module-utils.util" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="utils.util.eloss">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">eloss</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.eloss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate average elementwise losses measured by (take matrix for example)</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{N} \sum_{i, j} |X_{ij} - Y_{ij}|^q\]</div>
+<p>That is, we flatten two inputs as vectors, take the difference, calculate vector q-norm^q, and take the average as the final measurement.
+When q is 1, we have mean absolute loss (MAE); when q is 2, we have mean squared loss (MSE).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outputs</strong> (<em>numpy.ndarray</em>) – a numpy array, can have any shape</p></li>
+<li><p><strong>labels</strong> (<em>numpy.ndarray</em>) – a numpy array, can have any shape</p></li>
+<li><p><strong>q</strong> (<em>int</em>) – exponent for the vector norm</p></li>
+<li><p><strong>mean</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to take average over all scalar elements. Defaults to True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>if <code class="docutils literal notranslate"><span class="pre">mean</span> <span class="pre">=</span> <span class="pre">True</span></code>, then return the average elementwise loss; otherwise, return the sum of elementwise losses.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">util</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">util</span><span class="o">.</span><span class="n">eloss</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mean</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="go">0.25</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">util</span><span class="o">.</span><span class="n">eloss</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mean</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="go">1.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.extract">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract features and labels from a list-formated dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dataset</strong> (<em>list</em>) – a dataset like [(input_1, label_1), …, (input_n, label_n)]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>a tuple consisting of the following elements in sequence:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>X (<em>_np.ndarray</em>)</dt><dd><p>Design matrix <em>X</em> of shape (n, p)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Y (<em>_np.ndarray</em>)</dt><dd><p>Output <em>Y</em> of shape (n, 1)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.f">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">f</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the value of <cite>f(a, b)</cite> at <cite>(a, b)</cite>, where</p>
+<div class="math notranslate nohighlight">
+\[f(a, b) = \frac{1}{2}(||a_+ + b_+||^2 + ||a_+||^2 + ||b_-||^2)\]</div>
+<p>Here both <em>a</em> and <em>b</em> are both vectors with same dimension.
+Note that function <em>f(a, b)</em> is used to construct the DC decomposition of the following</p>
+<div class="math notranslate nohighlight">
+\[a_+^{\mathsf T} b = f(a, b) - g(a, b)\]</div>
+<p><em>g(a, b)</em> is defined in the following way</p>
+<div class="math notranslate nohighlight">
+\[g(a, b) = \frac{1}{2}(||a_+ + b_-||^2 + ||a_+||^2 + ||b_+||^2)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>numpy.ndarray</em>) – first argument, will be flattened</p></li>
+<li><p><strong>b</strong> (<em>numpy.ndarray</em>) – second argument of the same size, will also be flattened</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>function value of <em>f</em> at <em>(a, b)</em></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.fa">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">fa</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.fa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate subgradient of <cite>f(a, b)</cite> w.r.t. <cite>a</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>numpy.ndarray</em>) – first argument, will be flattened</p></li>
+<li><p><strong>b</strong> (<em>numpy.ndarray</em>) – second argument of the same size, will also be flattened</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1d numpy array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.fb">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">fb</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.fb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate subgradient of <cite>f(a, b)</cite> w.r.t. <cite>b</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>numpy.ndarray</em>) – first argument, will be flattened</p></li>
+<li><p><strong>b</strong> (<em>numpy.ndarray</em>) – second argument of the same size, will also be flattened</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1d numpy array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.g">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">g</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.g" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the value of <cite>g(a, b)</cite> at <cite>(a, b)</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>numpy.ndarray</em>) – first argument, will be flattened</p></li>
+<li><p><strong>b</strong> (<em>numpy.ndarray</em>) – second argument of the same size, will also be flattened</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>function value of <cite>g</cite> at <cite>(a, b)</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.ga">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">ga</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.ga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate subgradient of <cite>g(a, b)</cite> w.r.t. <cite>a</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>numpy.ndarray</em>) – first argument, will be flattened</p></li>
+<li><p><strong>b</strong> (<em>numpy.ndarray</em>) – second argument of the same size, will also be flattened</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1d numpy array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.gb">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">gb</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.gb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate subgradient of <cite>g(a, b)</cite> w.r.t. <cite>b</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>numpy.ndarray</em>) – first argument, will be flattened</p></li>
+<li><p><strong>b</strong> (<em>numpy.ndarray</em>) – second argument of the same size, will also be flattened</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1d numpy array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.normal_nn">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">normal_nn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nnmodel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.normal_nn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a dataset with the following underlying model,</p>
+<div class="math notranslate nohighlight">
+\[y = NN(x) + \sigma * e\]</div>
+<div class="math notranslate nohighlight">
+\[x \sim \mathcal N(0, I_p) \text{ and } e \sim \mathcal N(0, 1)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>int</em>) – sample size</p></li>
+<li><p><strong>p</strong> (<em>int</em>) – number of features</p></li>
+<li><p><strong>nnmodel</strong> (<em>_torch.nn.modules.container.Sequential</em>) – a neutral network model used for generating the dataset. It should be compatible (in the first layer) with <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – strength of the noise</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a dataset in the form of
+[(sample_1, label_1), …, (sample_n, label_n)]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">util</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># size of the problem</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">width</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">truemodel</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+<span class="gp">... </span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">width</span><span class="p">),</span>
+<span class="gp">... </span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
+<span class="gp">... </span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="gp">... </span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">normal_nn</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">truemodel</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.relunn">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">relunn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ulist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.relunn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output of a ReLU NN, that is</p>
+<div class="math notranslate nohighlight">
+\[((\ldots (X U_1)_+ \ldots)_+ U_L)_+ \alpha\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>numpy.ndarray</em>) – design matrix of shape (n, p)</p></li>
+<li><p><strong>Ulist</strong> (<em>list</em>) – list of weight matrices of NN, starting from the first hidden layer, that is [U_1, U_2, …, U_L].</p></li>
+<li><p><strong>alpha</strong> (<em>numpy.ndarray</em>) – weights of output layers, of shape (d_L, d_{L+1})</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output matrix of shape (n, d_{L+1}) with d_{L+1} as the dimension of output.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.splitdataset">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">splitdataset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_pct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.splitdataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split a dataset into training part and validation part.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> (<em>list</em>) – dataset like [(input_1, label_1), …, (input_n, label_n)]. For example, a dataset returned by normal_nn()</p></li>
+<li><p><strong>train_pct</strong> (<em>float</em><em>, </em><em>optional</em>) – percentage of training samples. Defaults to 0.8.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>a tuple consisting of the following elements in sequence</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>train_ds (<em>list</em>)</dt><dd><p>Training dataset in the same form as <code class="docutils literal notranslate"><span class="pre">dataset</span></code></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>val_ds (<em>list</em>)</dt><dd><p>Validation dataset in the same form as <code class="docutils literal notranslate"><span class="pre">dataset</span></code></p>
+</dd>
+</dl>
+</li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.todataset">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">todataset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.todataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given design matrix <em>X</em> and labels <em>Y</em>, return a list-form dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features</strong> (<em>numpy.ndarray</em><em> or </em><em>_torch.Tensor</em>) – design matrix of shape (n, d)</p></li>
+<li><p><strong>labels</strong> (<em>numpy.ndarray</em><em> or </em><em>_torch.Tensor</em>) – response matrix of shape (n, p) (usually p = 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a dataset in the form of
+[(sample_1, label_1), …, (sample_n, label_n)]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">util</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">util</span><span class="o">.</span><span class="n">todataset</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+<span class="go">[(tensor([1., 1.]), tensor(0.)), (tensor([1., 1.]), tensor(0.)), (tensor([1., 1.]), tensor(0.)), (tensor([1., 1.]), tensor(0.)), (tensor([1., 1.]), tensor(0.))]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.util.wholeloss">
+<code class="sig-prename descclassname"><span class="pre">utils.util.</span></code><code class="sig-name descname"><span class="pre">wholeloss</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wholeloader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">MSELoss()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.util.wholeloss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate loss based on a neural network model and a specified dataset (as a dataloader).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wholeloader</strong> (<em>_torch.utils.data.dataloader._DataLoader</em>) – a dataloader with only ONE batch specify the whole dataset</p></li>
+<li><p><strong>model</strong> (<em>_torch.nn.modules.container.Sequential</em>) – a neutral network model</p></li>
+<li><p><strong>loss_fn</strong> (<em>_torch.nn.modules.loss</em><em>, </em><em>optional</em>) – a loss function specified by _torch. Defaults to _torch.nn.MSELoss().</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>loss based on the specified dataset</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">util</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">torch.utils.data.dataloader</span> <span class="kn">import</span> <span class="n">DataLoader</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># run examples from util.normal_nn() to get train_ds and truemodel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">train_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_ds</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wtrain_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">train_ds</span><span class="p">,</span> <span class="n">train_size</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wholeloss</span><span class="p">(</span><span class="n">wtrain_loader</span><span class="p">,</span> <span class="n">truemodel</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Yifei Liu.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

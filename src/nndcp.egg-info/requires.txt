@@ -1,0 +1,13 @@
+matplotlib
+pandas
+numpy
+matplotlib
+cvxpy
+scs
+mosek
+scipy
+sklearn
+torch
+
+[dev]
+pytest>=3.7

@@ -1,0 +1,3 @@
+DCshallow
+SGDtraining
+data
