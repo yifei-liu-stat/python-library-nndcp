@@ -1,6 +1,6 @@
 # Neural Network Training with Difference of Convex Programming (DCP)
 
-This is an ongoing research project (in joint work with Chuan He) featuring neural network training with difference of convex probramming (DCP). When training neural networks, SGD usually stagnates at a bad local minima after some training. We aim to use DCP to avoid trapping in such solutions. For this purpose, we proposed three versions of the algorithm specifically for training neural network, aiming for different kinds of situations:
+This is a research project (in joint work with Chuan He, ISyE) featuring neural network training with difference of convex probramming (DCP). When training neural networks, SGD usually stagnates at a bad local minima after some epochs. We aim to use DCP to avoid such situations. To this end, we proposed three versions of the algorithm specifically for training neural network, aiming for different kinds of situations:
 
 * One-pass DC algorithm: deals with small DC subproblem
 * Two-pass DC algorithm: deals with large DC subproblem
