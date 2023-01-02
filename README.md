@@ -1,16 +1,14 @@
 # Neural Network Training with Difference of Convex Programming (DCP)
 
-This is a research project (in joint work with Chuan He, ISyE) featuring neural network training with difference of convex probramming (DCP). When training neural networks, SGD usually stagnates at a bad local minima after some epochs. We aim to use DCP to avoid such situations. To this end, we proposed three versions of the algorithm specifically for training neural network, aiming for different kinds of situations:
+This is a research project (in joint work with Chuan He, ISyE) featuring neural network training with difference of convex probramming (DCP). When training neural networks, SGD usually stagnates at a bad local minima after some epochs. We aim to use DCP to avoid such situations. Towards this end, we proposed three versions of the algorithm specifically for training neural network, aiming for different scenaria:
 
 * One-pass DC algorithm: deals with small DC subproblem
 * Two-pass DC algorithm: deals with large DC subproblem
 * Stochastic DC algorithm: scales to large training size
 
-We have derived specific forms for each of them, but up to this point, only the first version is documented in this Python project. 
-
 ## Documentation and examples
 
-The API documentation (all exported functions) of this package can be found in [index.html](https://github.umn.edu/liu00980/nndcp/tree/master/docs/_build/html/index.html). For an illustration of basic usage for some key functions, check [examples.ipynb](https://github.umn.edu/liu00980/nndcp/tree/master/examples.ipynb) in the root directory. I haven't found a place to host the documentation privately, so in order to view [index.html](https://github.umn.edu/liu00980/nndcp/tree/master/docs/_build/html/index.html), one will have to download it and view it in a web browser.
+The API documentation (all exported functions) of this package can be found in [index.html](https://github.umn.edu/liu00980/nndcp/tree/master/docs/_build/html/index.html). For an illustration of basic usage for some key functions, check [examples.ipynb](https://github.umn.edu/liu00980/nndcp/tree/master/examples.ipynb) in the root directory.
 
 ## Installation
 
@@ -43,11 +41,11 @@ Y = calhousing["Y"]
 
 ### `utils.util`
 
-Subpackage `utils` is designed for storing some small but useful functions. For now, it only has one module `utils.util` consisting of functions for transformation between different Python objects, intermediate calculation and etc. Please refer to the documentation of `nndcp` to check functions provided by this module.
+Subpackage `utils` contains some helper functions. For now, it only has one module `utils.util` consisting of functions for transformation between different Python objects, intermediate calculation and etc. Please refer to the documentation of `nndcp` to check functions provided by this module.
 
 ### `SGDtraining`
 
-This module provides a pipe line for training neural network with SGD. It contains one and only one function `trainnn_sgd` with the following semantics:
+This module provides a pipeline for training neural network with SGD.
 
 ```python
 # example of using trainnn_sgd
@@ -64,12 +62,9 @@ trainnn_sgd(
 )
 ```
 
-For now, it only supports plain SGD, which uses fix learning rate for training. In future, customized optimizer and learning rate scheduler will be added to the features, and this will allow us to use SGD variants, adaptivive learning rates, and regularizations when training neural networks.
-
-
 ### `DCshallow`
 
-This module implement the one-pass DC algorithm with shallow ReLU network, in which case, the DC subproblem is small. To performt the algorithm, call:
+This module implements the one-pass DC algorithm with shallow ReLU network for small DC subproblem. To perform the algorithm, call:
 
 ```python
 # example of using trainnn_dcshallow
@@ -85,7 +80,7 @@ trainnn_dcshallow(
 )
 ```
 
-The starting poing can either be a SGD-trained network model, or simply initialization. When the network is deep, one-pass algorithm might not be suitable due to computation efficiency.
+The starting point can be a SGD-trained network model, which is specified by train_model. When the network is deep, one-pass algorithm might not be suitable due to computation efficiency.
 
 ## Developing `nndcp`
 
